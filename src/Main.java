@@ -29,4 +29,8 @@ public class Main {
     // Aufgabe : Bauen das Chonkotron nach und konfigurieren sie es so, das
     // Fluffy endlich diät macht und ein gesundes Gewicht erreicht.
 
+    public static void main(String[] args) {
+
+    }
+
 }
