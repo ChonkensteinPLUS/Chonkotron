@@ -1,4 +1,5 @@
 public class Cat {
+
     String name;
     float weight;
     int fluffyness;

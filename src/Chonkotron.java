@@ -11,12 +11,12 @@ public class Chonkotron {
     }
 
     public void RefillSlot(int slotNo) {
+        System.out.printf("Refilling Slot %d\n", slotNo);
         switch (slotNo) {
             case 1 -> this.slot1.capacity = 500;
             case 2 -> this.slot2.capacity = 500;
             case 3 -> this.slot3.capacity = 500;
-            default -> System.out.printf("Slot no %d does not exist, please upgrade your CHONKOTRON to a model" +
-                    "with more food slots for just 3999$...\n", slotNo);
+            default -> {}
         }
     }
 

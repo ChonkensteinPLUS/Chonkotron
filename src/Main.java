@@ -39,10 +39,11 @@ public class Main {
         SecureRandom rand = new SecureRandom();
 
         for (int d = 0; d < days; d++) {
+            cat.Meow();
             int appetite = rand.nextInt(2,7);
+
             for (int i = 0; i < appetite ; i++) {
                 int slot = chonk.WeighCat(cat);
-                cat.Meow();
                 boolean hasEaten = cat.Eat(chonk, slot);
                 if (!hasEaten) {
                     chonk.RefillSlot(slot);
@@ -54,5 +55,6 @@ public class Main {
             cat.Sleep();
             System.out.println();
         }
+        System.out.println(cat);
     }
 }
