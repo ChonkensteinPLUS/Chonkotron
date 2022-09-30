@@ -1,5 +1,10 @@
 public class Main {
+    public static void main(String[] args) {
 
+        Chonkotron Chonk2000 = new Chonkotron();
+        System.out.println(Chonk2000.getContainer()[0].getCalPer150g());
+
+    }
     // Step 1:
     // Es soll ein KatzenfutterAutomat implementiert werden (das CHONKOTRON)
     // Dieser Automat soll verschiedene Futtersorten beinhalten (je 500g)
