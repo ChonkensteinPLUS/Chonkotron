@@ -4,6 +4,14 @@ public class Futter {
     private float calories;
     private float remaining;
 
+    public String getName() {
+        return name;
+    }
+
+    public float getCalories() {
+        return calories;
+    }
+
     public Futter(FutterSorten Sorte){
         this.remaining = 500;
         if(Sorte == FutterSorten.CHONKYDELUXE){

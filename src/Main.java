@@ -19,7 +19,7 @@ public class Main {
     // bei 1400 kal pro tag bleibt das gewicht stabil
     // für je 500 kal extra nimmt sie 1 kg zu
     // für je 500 kal weniger nimmt sie 1 kg ab
-    // Die Katze will pro Tag zufällig zwischen (2 und 5 mal Futter)
+    // Die Katze will pro Tag zufällig zwischen (2 und 5 mal) Futter
 
     // Beispielkatze : Fluffy von Chonkenstein
     // Name : Fluffy
@@ -32,7 +32,8 @@ public class Main {
     public static void main(String[] args) {
 
         Chonkotron c1 = new Chonkotron();
-
+        Katze flauschi = new Katze("Flauschi von Chonkenstein",8f);
+        flauschi.eat(new Futter(FutterSorten.CHONKYDELUXE));
 
     }
 
