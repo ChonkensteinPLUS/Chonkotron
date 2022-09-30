@@ -5,6 +5,11 @@ public class Cat {
     int mealsToday;
     float calsToday;
 
+    {
+        this.mealsToday = 0;
+        this.calsToday = 0;
+    }
+
     public Cat(String name, float weight, int fluffyness) {
         this.name = name;
         this.weight = weight;
@@ -16,52 +21,49 @@ public class Cat {
     }
 
     public boolean Eat(Chonkotron c, int slotNo) {
-        if (this.mealsToday < 5) {
-            switch (slotNo) {
-                case 1:
-                    if (c.slot1.capacity >= 100) {
-                        c.slot1.capacity -= 100;
-                        this.calsToday += c.slot1.calPerG * 100f;
-                        this.mealsToday++;
-                        System.out.println("YUMMY");
-                        this.fluffyness += 10;
-                        return true;
-                    } else {
-                        System.out.printf("Not enough food in slot %d\n", slotNo);
-                        return false;
-                    }
-                case 2:
-                    if (c.slot2.capacity >= 100) {
-                        c.slot2.capacity -= 100;
-                        this.calsToday += c.slot2.calPerG * 100f;
-                        this.mealsToday++;
-                        System.out.println("haz ok taste");
-                        this.fluffyness += 5;
-                        return true;
-                    } else {
-                        System.out.printf("Not enough food in slot %d\n", slotNo);
-                        return false;
-                    }
-                case 3:
-                    if (c.slot3.capacity >= 100) {
-                        c.slot3.capacity -= 100;
-                        this.calsToday += c.slot3.calPerG * 100f;
-                        this.mealsToday++;
-                        System.out.println("ewwwwwwwww diet food");
-                        this.fluffyness -= 10;
-                        return true;
-                    } else {
-                        System.out.printf("Not enough food in slot %d\n", slotNo);
-                        return false;
-                    }
-                default:
-                    System.out.printf("Slot %d doesn't exist\n", slotNo);
+        switch (slotNo) {
+            case 1:
+                if (c.slot1.capacity >= 100) {
+                    c.slot1.capacity -= 100;
+                    this.calsToday += c.slot1.calPerG * 100f;
+                    this.mealsToday++;
+                    System.out.println("YUMMY");
+                    this.fluffyness += 10;
+                    return true;
+                } else {
+                    System.out.printf("Not enough food in slot %d\n", slotNo);
                     return false;
-            }
-        } else {
-            System.out.println("Kitty had enough to eat for today!! Bad kitty...");
-            return false;
+                }
+            case 2:
+                if (c.slot2.capacity >= 100) {
+                    c.slot2.capacity -= 100;
+                    this.calsToday += c.slot2.calPerG * 100f;
+                    this.mealsToday++;
+                    System.out.println("haz ok taste");
+                    this.fluffyness += 5;
+                    return true;
+                } else {
+                    System.out.printf("Not enough food in slot %d\n", slotNo);
+                    return false;
+                }
+            case 3:
+                if (c.slot3.capacity >= 100) {
+                    c.slot3.capacity -= 100;
+                    this.calsToday += c.slot3.calPerG * 100f;
+                    this.mealsToday++;
+                    System.out.println("ewwwwwwwww diet food");
+                    this.fluffyness -= 10;
+                    return true;
+                } else {
+                    System.out.printf("Not enough food in slot %d\n", slotNo);
+                    return false;
+                }
+            default:
+                System.out.println("but me still haz hunger...");
+                this.fluffyness -= 5;
+                return true;
         }
+
     }
 
     public void Sleep() {

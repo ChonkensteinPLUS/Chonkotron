@@ -22,6 +22,10 @@ public class Chonkotron {
 
     // returns slot number to use for eating
     public int WeighCat(Cat c) {
+        if (c.mealsToday >= 5) {
+            System.out.println("Kitty already had enough to eat today! Kitty must remember diet!");
+            return 0;
+        }
         System.out.printf("Cat weighs %.2f kilograms. ", c.weight);
         if (c.weight < 4f) {
             System.out.print("Using food slot 1\n");
