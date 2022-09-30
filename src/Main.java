@@ -29,4 +29,28 @@ public class Main {
     // Aufgabe : Bauen das Chonkotron nach und konfigurieren sie es so, das
     // Fluffy endlich diät macht und ein gesundes Gewicht erreicht.
 
+    public static void main(String[] args)
+    {
+        // Init stuff
+        Katze cat = new Katze("Fluffy", 8.0);
+
+        Katzenfutter food1 = new Katzenfutter("ChonkyDeluxe", 800, new Chonkotron().getMaxCapacity());
+        Katzenfutter food2 = new Katzenfutter("HealthyBoi", 500, new Chonkotron().getMaxCapacity());
+        Katzenfutter food3 = new Katzenfutter("YouTooFat", 200, new Chonkotron().getMaxCapacity());
+        Katzenfutter[] foodArray = {food1, food2, food3};
+
+        Chonkotron chonkotron = new Chonkotron(foodArray);
+
+
+        // ?
+        int dayCounter = 1;
+        while (cat.getWeight() > 7.0) {
+            System.out.println("Day " + dayCounter);
+            cat.EatAllDay(chonkotron);
+
+            System.out.printf("- Day ended. %s now weighs %.2f kgs\n\n", cat.getName(), cat.getWeight());
+            dayCounter++;
+            chonkotron.Refill();
+        }
+    }
 }
