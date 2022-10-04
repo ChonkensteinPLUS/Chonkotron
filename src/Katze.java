@@ -20,8 +20,33 @@ public class Katze {
         caloriesThisDay += catFood.getCalories();
     }
 
-    public void EndOfDay(){
-        // Logik für ab oder zunehmen
+    protected void addCalories(float calories){
+        this.caloriesThisDay = calories;
     }
 
+    /**
+     * Rechnet am Ende eines Tages aus,ob die Katze zu- oder abnimmt.
+     */
+    public void EndOfDay(){
+        float calEvaluationValue = caloriesThisDay -1400;
+        float weightBalance = calEvaluationValue / 500;
+        this.gewicht += weightBalance;
+        caloriesThisDay = 0;
+    }
+
+    public float getGewicht() {
+        return gewicht;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Katze{" +
+                "name='" + name + '\'' +
+                ", gewicht=" + gewicht +
+                '}';
+    }
 }

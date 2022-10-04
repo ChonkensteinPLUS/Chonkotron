@@ -4,13 +4,34 @@ public class Main {
     public static void main(String[] args) {
 
         Chonkotron chonk2000 = new Chonkotron();
-        Jerboa cutie = new Jerboa("Cutie von Cutington", 8, 100);
+     /*   Jerboa cutie = new Jerboa("Cutie von Cutington", 8, 100);
         for(int i = 0;i < 14;i++) {
             dayPassing(chonk2000, cutie);
             System.out.println(cutie);
-        }
-    }
+        } */
 
+        Katze fluffy = new Katze("Fluffy von Chonkenstein", 8f);
+        for(int i = 0;i < 14;i++){
+            dayPassing(chonk2000,fluffy);
+            System.out.println(fluffy);
+        }
+
+    }
+    /**
+     * Simuliert den Verlauf eines Tages, ruft 2-5 mal die Füttern Funktion auf
+     * @param chonkotron Chonkotron welches das Futter ausschüttet
+     * @param chonkster Katze die gefüttert werden soll ...
+     */
+    public static void dayPassing(Chonkotron chonkotron, Katze chonkster) {
+
+        Random rd = new Random();
+        int numNoms = rd.nextInt(2,6);
+        System.out.println(numNoms);
+        for (int i = 0; i < numNoms; i++) {
+            chonkster.eat(chonkotron.dispenseFood(chonkster));
+        }
+        chonkster.EndOfDay();
+    }
     public static void dayPassing(Chonkotron grubmachine, Jerboa chonkster) {
 
         Random rd = new Random();

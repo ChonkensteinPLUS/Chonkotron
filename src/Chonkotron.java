@@ -15,18 +15,18 @@ public class Chonkotron {
     public float getPortionSize() { return portionSize; }
     public void setPortionSize(float portionSize) { this.portionSize = portionSize; }
 
-    public float dispenseFood(float weight, String name) {
+    public Futter dispenseFood(Katze chonker) {
         Futter ReturnContainer;
-        if (weight < 4) {
+        if (chonker.getGewicht() < 4) {
             ReturnContainer = this.futterSlots[0];
-        } else if (weight < 7) {
+        } else if (chonker.getGewicht() < 7) {
             ReturnContainer = this.futterSlots[1];
         }
         else {
             ReturnContainer = this.futterSlots[2];
         }
-        System.out.printf("%s gets \"%s\".\n", name, ReturnContainer.getName());
+        System.out.printf("%s gets \"%s\".\n", chonker.getName(), ReturnContainer.getName());
         ReturnContainer.dispense(portionSize);
-        return ReturnContainer.getCalories();
+        return ReturnContainer;
     }
 }

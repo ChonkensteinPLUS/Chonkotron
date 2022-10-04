@@ -20,7 +20,7 @@ public class Jerboa {
     public void setFluffability(int fluffability) { this.fluffability = fluffability; }
 
     public void grabGrub(Chonkotron grubmachine) {
-        this.calorieIntake = this.calorieIntake + grubmachine.dispenseFood(this.weight, this.name);
+      //  this.calorieIntake = this.calorieIntake + grubmachine.dispenseFood(this.weight, this.name);
     }
 
     public void evalWeight() {
