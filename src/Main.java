@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
         Chonkotron chonk2000 = new Chonkotron();
-        Jerboa cutie = new Jerboa("Cutie von Cutington", 4, 100);
+        Jerboa cutie = new Jerboa("Cutie von Cutington", 8, 100);
         for(int i = 0;i < 14;i++) {
             dayPassing(chonk2000, cutie);
             System.out.println(cutie);

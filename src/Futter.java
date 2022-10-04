@@ -12,8 +12,8 @@ public class Futter {
     }
 
     public Futter(FutterSorten Sorte){
+        this.Sorte = Sorte;
         this.remaining = 500;
-
     }
 
     @Override
