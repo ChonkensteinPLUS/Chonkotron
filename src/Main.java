@@ -51,5 +51,22 @@ public class Main {
     // Aufgabe : Bauen das Chonkotron nach und konfigurieren sie es so, das
     // Fluffy endlich diät macht und ein gesundes Gewicht erreicht.
 
+    // Level 2 : Die Katze hat Tricks gelernt : Wenn man auf den Knopf drückt kommt futter
+    //          -> drücken bis der Arzt kommt
+    //           Die Katze hat gelernt : Auch diätfutter kann man essen : es muss nur mehr sein !
+    //          -> Wenn ihr die Kalorien nicht reichen , einfach nochmal futter verlagen !
+    //           Die Katze hat gelernt : Wenn ich weniger Futter kriege, bewege ich mich eben einfach
+    //           weniger, das nenne ich energieeffizienz
+    //          -> Wenn die Katze abzunehmen droht, dann bewegt sie sich weniger und braucht weniger Kalorien
+    //           (100 kal weniger pro Tag) (solange bis 800kal / Tag)
+
+    // Aufgabe : Bringen sie das ihrer Katze bei und überlisten sie das böse Chonkotron !
+
+    // Level 3 : Passen sie das Chonkotron an und zwingen sie die Katze zur Diät !
+    //           Sollte das Futter einmal leer sein, dann muss es nachgefüllt werden.
+    //           Um Futter nachzufüllen braucht man 1 Tag, an dem dieses Futter nicht verfügbar ist
+    //           (es muss also ein anderes ausgeschüttet werden)
+
+
 
 }
