@@ -1,4 +1,26 @@
+import java.util.Random;
+
 public class Main {
+    public static void main(String[] args) {
+
+        Chonkotron chonk2000 = new Chonkotron();
+        Jerboa cutie = new Jerboa("Cutie von Cutington", 4, 100);
+        for(int i = 0;i < 14;i++) {
+            dayPassing(chonk2000, cutie);
+            System.out.println(cutie);
+        }
+    }
+
+    public static void dayPassing(Chonkotron grubmachine, Jerboa chonkster) {
+
+        Random rd = new Random();
+        int numNoms = rd.nextInt(2,6);
+        System.out.println(numNoms);
+        for (int i = 0; i < numNoms; i++) {
+            chonkster.grabGrub(grubmachine);
+        }
+        chonkster.evalWeight();
+    }
 
     // Step 1:
     // Es soll ein KatzenfutterAutomat implementiert werden (das CHONKOTRON)
@@ -29,12 +51,5 @@ public class Main {
     // Aufgabe : Bauen das Chonkotron nach und konfigurieren sie es so, das
     // Fluffy endlich diät macht und ein gesundes Gewicht erreicht.
 
-    public static void main(String[] args) {
-
-        Chonkotron c1 = new Chonkotron();
-        Katze flauschi = new Katze("Flauschi von Chonkenstein",8f);
-        flauschi.eat(new Futter(FutterSorten.CHONKYDELUXE));
-
-    }
 
 }

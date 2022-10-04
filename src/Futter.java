@@ -24,4 +24,8 @@ public class Futter {
                 ", remaining = " + this.remaining + "g" +
                 '}';
     }
+
+    public void dispense(float ammount){
+        this.remaining -= ammount;
+    }
 }
